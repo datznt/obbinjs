@@ -1,20 +1,4 @@
 const ObbinJS = function () {
-    /* 
-    OBSERVER PATTERN IMPLEMENTATION
-    init a object
-    window.$s.set('objectName', defaultValue, commit?);
-
-    validators for a object
-    window.$s.validators('objectName',[callback,])
-
-    watch data change
-    window.$s.watch('objectName', callback(newValue,oldValue), delay=0);
-
-    render html on data change
-    window.$s.live('objectName', selector, function (obj,old,format) {
-        return format(`<p>{0}</p>`, obj.value);
-    });
-    */
     this._values = {};
     const that = this;
     this.watch = function (key, callback, timeout = 0) {
