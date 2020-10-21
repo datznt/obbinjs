@@ -17,8 +17,11 @@ window.$s.validators('objectName',[v => v instanceof Array,])
 ```
 
 Track the variable when the variable's data is changed
+example:
 ``` js
-window.$s.watch('objectName', callback(newValue,oldValue), delay=0);
+$s.watch('objectName', function (newValue, oldValue) {
+    console.log('holla', newValue, oldValue);
+},1000);
 ```
 
 ObbinJS accomplishes this by building a virtual DOM to keep track of the changes it needs to make to the real DOM. Taking a closer look at this line:
